@@ -1,7 +1,6 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-
     <session-factory>
         <!-- Configuracion de la conexión a la BBDD -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
@@ -14,10 +13,5 @@
         <!-- Crea las tablas automáticamente -->
         <property name="hibernate.hbm2ddl.auto">update</property>
         <!-- Mapear las entidades aqui -->
-        <mapping class="Modelo.Articulo"/>
-        <mapping class="Modelo.Cliente"/>
-        <mapping class="Modelo.Pedido"/>
-        <mapping class="Modelo.ClienteEstandar"/>
-        <mapping class="Modelo.ClientePremium"/>
     </session-factory>
 </hibernate-configuration>

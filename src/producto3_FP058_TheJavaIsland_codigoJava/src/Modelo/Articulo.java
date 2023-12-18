@@ -13,10 +13,15 @@ public class Articulo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     /** Atributos de la clase */
     private int id;
+
     private String codigo;
+    @Column(name="Descripcion")
     private String Descripcion;
+    @Column(name="PrecioDeVenta")
     private double precioDeVenta;
+    @Column(name="GastosDeEnvio")
     private double gastosDeEnvio;
+    @Column(name="TiempoDePreparacion")
     private double tiempoDePreparacion;
 
 

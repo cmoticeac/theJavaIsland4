@@ -1,20 +1,31 @@
 package Modelo;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
 import java.text.SimpleDateFormat;
 import java.time.*;
 import java.text.ParseException;
 import java.util.Date;
+@Entity
+@Table(name= "pedido")
 public class Pedido {
-
     /**
      * Atributos de la clase
      */
-
+    @Column(name="numeroPedido")
     private int numeroPedido;
+    @Column(name="IdCliente")
     private Cliente cliente;
+    @Column(name="IdArticulo")
     private Articulo articulo;
+    @Column(name="CantidadArticulo")
     private int cantidadArticulos;
+    @Column(name="FechaHora")
     private LocalDateTime fechaHora;
+    @Column(name="PrecioTotal")
     private double precioTotal;
+   @Column(name="Enviado")
     private boolean enviado;
 
     //Constructores

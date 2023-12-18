@@ -1,9 +1,17 @@
 package Modelo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="cliente")
 public abstract class Cliente {
 
     //Atributos
+    @Id
     private int id;
+
     private String Nombre;
     private String Domicilio;
     private String Nif;
