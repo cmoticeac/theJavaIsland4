@@ -1,21 +1,37 @@
 package Modelo;
+import jakarta.persistence.*;
+
 import java.text.SimpleDateFormat;
 import java.time.*;
 import java.text.ParseException;
 import java.util.Date;
+@Entity
+@Table(name = "pedido")
 public class Pedido {
 
     /**
      * Atributos de la clase
      */
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "id")
     private int numeroPedido;
+    @ManyToOne
+    @JoinColumn(name = "cliente", referencedColumnName = "id_cliente")
     private Cliente cliente;
+    @ManyToOne
+    @JoinColumn(name = "articulo", referencedColumnName = "id_articulo")
     private Articulo articulo;
+    @Column (name = "cantidadArticulos")
     private int cantidadArticulos;
+    @Column (name = "fechaHora")
     private LocalDateTime fechaHora;
+    @Column (name = "precioTotal")
     private double precioTotal;
+    @Column (name = "enviado")
     private boolean enviado;
+
 
     //Constructores
     public Pedido(int np, Cliente cl, Articulo art, int ca, LocalDateTime fh, double pt, boolean en){

@@ -1,5 +1,8 @@
 package Modelo;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class ClienteEstandar extends Cliente{
 
     public ClienteEstandar(String n, String d, String nif, String m) {

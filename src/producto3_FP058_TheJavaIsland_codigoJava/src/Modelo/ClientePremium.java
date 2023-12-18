@@ -1,9 +1,15 @@
 package Modelo;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+
+@Entity
 public class ClientePremium extends Cliente{
 
     //Atributos propios de usuarios premium
+    @Column(name ="cuota")
     private double cuota;
+    @Column(name ="descuentoenvio")
     private double descuentoEnvio;
 
 

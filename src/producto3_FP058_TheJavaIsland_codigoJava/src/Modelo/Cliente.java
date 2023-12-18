@@ -1,12 +1,24 @@
 package Modelo;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "cliente")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Cliente {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "id_cliente")
     //Atributos
     private int id;
+    @Column(name = "nombre")
     private String Nombre;
+    @Column(name = "domicilio")
     private String Domicilio;
+    @Column(name = "nif")
     private String Nif;
+    @Column(name = "email")
     private String Email;
 
     //Contructor
