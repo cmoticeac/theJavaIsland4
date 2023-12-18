@@ -8,8 +8,8 @@ import jakarta.persistence.*;
 public abstract class Cliente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "Id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column (name = "Id_cliente")
     //Atributos
     private int id;
     @Column(name = "Nombre")

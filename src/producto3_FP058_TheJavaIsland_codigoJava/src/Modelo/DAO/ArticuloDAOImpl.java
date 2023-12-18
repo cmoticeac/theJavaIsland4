@@ -1,7 +1,8 @@
 package Modelo.DAO;
 import Modelo.*;
+import Modelo.Articulo;
 import java.sql.*;
-import java.util.ArrayList;
+import java.util.*;
 
 import Modelo.Hibernate;
 import org.hibernate.*;
@@ -24,15 +25,21 @@ public class ArticuloDAOImpl implements ArticuloDAO {
     }
 
     @Override
-    public ArrayList<Articulo> readAll() {
+    public ArrayList<Articulo>readAll(){
         try (Session session = sessionFactory.openSession()) {
-            return session.get(Articulo.class, codigo);
+            return (ArrayList<Articulo>) session.createQuery("FROM EntidadTabla", Articulo.class).list();
         }
     }
 
     @Override
     public Articulo findById(int id) {
-
+        try (Session session = sessionFactory.openSession()) {
+            Articulo art = session.get(Articulo.class, id);
+            return art;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override

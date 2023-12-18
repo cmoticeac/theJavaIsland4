@@ -11,7 +11,7 @@ public class Articulo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "Id")
+    @Column (name = "Id_articulo")
     /** Atributos de la clase */
     private String codigo;
     @Column(name = "Descripcion")
