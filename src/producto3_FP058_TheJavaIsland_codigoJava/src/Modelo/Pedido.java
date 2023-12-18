@@ -15,21 +15,21 @@ public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id")
+    @Column (name = "NumeroPedido")
     private int numeroPedido;
     @ManyToOne
-    @JoinColumn(name = "cliente", referencedColumnName = "id_cliente")
+    @JoinColumn(name = "cliente", referencedColumnName = "IdCliente")
     private Cliente cliente;
     @ManyToOne
-    @JoinColumn(name = "articulo", referencedColumnName = "id_articulo")
+    @JoinColumn(name = "articulo", referencedColumnName = "IdArticulo")
     private Articulo articulo;
-    @Column (name = "cantidadArticulos")
+    @Column (name = "CantidadArticulo")
     private int cantidadArticulos;
-    @Column (name = "fechaHora")
+    @Column (name = "FechaHora")
     private LocalDateTime fechaHora;
-    @Column (name = "precioTotal")
+    @Column (name = "PrecioTotal")
     private double precioTotal;
-    @Column (name = "enviado")
+    @Column (name = "Enviado")
     private boolean enviado;
 
 

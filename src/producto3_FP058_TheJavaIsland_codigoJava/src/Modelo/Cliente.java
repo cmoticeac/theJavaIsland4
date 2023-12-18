@@ -9,16 +9,16 @@ public abstract class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id_cliente")
+    @Column (name = "Id")
     //Atributos
     private int id;
-    @Column(name = "nombre")
+    @Column(name = "Nombre")
     private String Nombre;
-    @Column(name = "domicilio")
+    @Column(name = "Domicilio")
     private String Domicilio;
-    @Column(name = "nif")
+    @Column(name = "NIF")
     private String Nif;
-    @Column(name = "email")
+    @Column(name = "Email")
     private String Email;
 
     //Contructor

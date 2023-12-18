@@ -11,16 +11,16 @@ public class Articulo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id_articulo")
+    @Column (name = "Id")
     /** Atributos de la clase */
     private String codigo;
-    @Column(name = "descripcion")
+    @Column(name = "Descripcion")
     private String Descripcion;
-    @Column(name = "preciodeventa")
+    @Column(name = "PrecioDeVenta")
     private double precioDeVenta;
-    @Column(name = "gastosdeenvio")
+    @Column(name = "GastosDeEnvio")
     private double gastosDeEnvio;
-    @Column(name = "tiempodepreparacion")
+    @Column(name = "TiempoDePreparacion")
     private double tiempoDePreparacion;
 
 
