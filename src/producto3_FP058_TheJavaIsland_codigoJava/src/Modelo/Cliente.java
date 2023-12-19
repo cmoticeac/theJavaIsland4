@@ -4,21 +4,22 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cliente")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "TipoCliente", discriminatorType = DiscriminatorType.STRING)
 public abstract class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id_cliente")
+    @Column (name = "Id")
     //Atributos
     private int id;
-    @Column(name = "nombre")
+    @Column(name = "Nombre")
     private String Nombre;
-    @Column(name = "domicilio")
+    @Column(name = "Domicilio")
     private String Domicilio;
-    @Column(name = "nif")
+    @Column(name = "NIF")
     private String Nif;
-    @Column(name = "email")
+    @Column(name = "Email")
     private String Email;
 
     //Contructor
@@ -30,6 +31,7 @@ public abstract class Cliente {
     }
     public Cliente(){}
     //Setters y getters
+    public int getId(){return id;}
     public String getNombre() {return Nombre;}
 
     public String getDomicilio() {return Domicilio;}
@@ -37,6 +39,7 @@ public abstract class Cliente {
     public String getNif() {return Nif;}
 
     public String getEmail() {return Email;}
+    public void setId(int id){this.id = id;}
 
     public void setNombre(String c) {this.Nombre = c;}
 

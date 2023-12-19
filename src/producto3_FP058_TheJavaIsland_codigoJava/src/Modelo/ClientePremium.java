@@ -1,16 +1,18 @@
 package Modelo;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 @Entity
+@DiscriminatorValue("estandar")
 public class ClientePremium extends Cliente{
 
     //Atributos propios de usuarios premium
-    @Column(name ="cuota")
-    private double cuota;
-    @Column(name ="descuentoenvio")
-    private double descuentoEnvio;
+    @Column(name ="CuotaMensual")
+    private Double cuota;
+    @Column(name ="Descuento")
+    private Double descuentoEnvio;
 
 
     //Contructor
@@ -21,11 +23,11 @@ public class ClientePremium extends Cliente{
     }
     public ClientePremium() {}
     //Setters i getters
-    public double getCuota() {return this.cuota;}
-    public double getDescuentoEnvio(){return this.descuentoEnvio;}
+    public Double getCuota() {return this.cuota;}
+    public Double getDescuentoEnvio(){return this.descuentoEnvio;}
 
-    public void setCuota(double c) {this.cuota = c;}
-    public void setDescuentoEnvio(double c) {this.descuentoEnvio = c;}
+    public void setCuota(Double c) {this.cuota = c;}
+    public void setDescuentoEnvio(Double c) {this.descuentoEnvio = c;}
 
 
     //toString()

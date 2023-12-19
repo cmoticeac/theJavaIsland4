@@ -11,22 +11,22 @@ public class Articulo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id_articulo")
+    @Column (name = "Id")
     /** Atributos de la clase */
-    private String codigo;
-    @Column(name = "descripcion")
+    private int codigo;
+    @Column(name = "Descripcion")
     private String Descripcion;
-    @Column(name = "preciodeventa")
+    @Column(name = "PrecioDeVenta")
     private double precioDeVenta;
-    @Column(name = "gastosdeenvio")
+    @Column(name = "GastosDeEnvio")
     private double gastosDeEnvio;
-    @Column(name = "tiempodepreparacion")
+    @Column(name = "TiempoDePreparacion")
     private double tiempoDePreparacion;
 
 
     /** Constructores */
 
-    public Articulo(String codigo, String descripcion, double precioDeVenta, double gastoDeEnvio, double tiempoDePrepar) {
+    public Articulo(int codigo, String descripcion, double precioDeVenta, double gastoDeEnvio, double tiempoDePrepar) {
         this.codigo = codigo;
         this.Descripcion = descripcion;
         this.precioDeVenta = precioDeVenta;
@@ -41,11 +41,11 @@ public class Articulo {
      * Metodos getters y setters
      */
 
-    public String getCodigo() {
+    public int getCodigo() {
         return this.codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 

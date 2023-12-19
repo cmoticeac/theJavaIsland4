@@ -1,5 +1,7 @@
 package Modelo.DAO;
 import Modelo.Cliente;
+import Modelo.ClienteEstandar;
+
 import java.util.*;
 
 public interface ClienteDAO {

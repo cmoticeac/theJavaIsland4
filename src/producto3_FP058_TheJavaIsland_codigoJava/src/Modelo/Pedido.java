@@ -7,6 +7,8 @@ import java.text.ParseException;
 import java.util.Date;
 @Entity
 @Table(name = "pedido")
+@SecondaryTable(name = "articulo", pkJoinColumns = @PrimaryKeyJoinColumn(name = "IdArticulo"))
+@SecondaryTable(name = "cliente", pkJoinColumns = @PrimaryKeyJoinColumn(name = "IdCliente"))
 public class Pedido {
 
     /**
@@ -15,21 +17,21 @@ public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id")
+    @Column (name = "NumeroPedido")
     private int numeroPedido;
     @ManyToOne
-    @JoinColumn(name = "cliente", referencedColumnName = "id_cliente")
+    @JoinColumn(name = "IdCliente", referencedColumnName = "Id")
     private Cliente cliente;
     @ManyToOne
-    @JoinColumn(name = "articulo", referencedColumnName = "id_articulo")
+    @JoinColumn(name = "IdArticulo", referencedColumnName = "Id")
     private Articulo articulo;
-    @Column (name = "cantidadArticulos")
+    @Column (name = "CantidadArticulo")
     private int cantidadArticulos;
-    @Column (name = "fechaHora")
+    @Column (name = "FechaHora")
     private LocalDateTime fechaHora;
-    @Column (name = "precioTotal")
+    @Column (name = "PrecioTotal")
     private double precioTotal;
-    @Column (name = "enviado")
+    @Column (name = "Enviado")
     private boolean enviado;
 
 

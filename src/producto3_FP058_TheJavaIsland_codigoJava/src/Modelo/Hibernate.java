@@ -11,7 +11,7 @@ public class Hibernate {
         // Create the SessionFactory from hibernate.cfg.xml
         Configuration configuration = new Configuration();
         configuration.configure("hibernate.cfg.xml");
-        System.out.println("Hibernate Configuration loaded");
+        System.out.println("Connfiguracion de Hibernate cargada");
 
         // Configura las clases de entidad que deseas mapear
         configuration.addAnnotatedClass(Articulo.class);
@@ -21,7 +21,7 @@ public class Hibernate {
         configuration.addAnnotatedClass(Pedido.class);
         //apply configuration property settings to StandardServiceRegistryBuilder
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-        System.out.println("Hibernate serviceRegistry created");
+        System.out.println("Registro de Hibernate creado correctamente");
 
         SessionFactory sessionFactory = configuration
                 .buildSessionFactory(serviceRegistry);
@@ -30,7 +30,7 @@ public class Hibernate {
     }
         catch (Throwable ex) {
         // Make sure you log the exception, as it might be swallowed
-        System.err.println("Initial SessionFactory creation failed." + ex);
+        System.err.println("Error al iniciar SessionFactory." + ex);
         throw new ExceptionInInitializerError(ex);
         }
     }

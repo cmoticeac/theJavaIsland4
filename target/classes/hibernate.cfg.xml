@@ -5,19 +5,11 @@
     <session-factory>
         <!-- Configuracion de la conexión a la BBDD -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/theJavaIsland?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/javaisland?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">Ianostyak2015.</property>
+        <property name="hibernate.connection.password">fepowol41</property>
         <!-- Configuración de Hibernate -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.show_sql">true</property>
-        <!-- Crea las tablas automáticamente -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
-        <!-- Mapear las entidades aqui -->
-        <mapping class="Modelo.Articulo"/>
-        <mapping class="Modelo.Cliente"/>
-        <mapping class="Modelo.Pedido"/>
-        <mapping class="Modelo.ClienteEstandar"/>
-        <mapping class="Modelo.ClientePremium"/>
     </session-factory>
 </hibernate-configuration>

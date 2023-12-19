@@ -1,8 +1,10 @@
 package Modelo;
 
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 @Entity
+@DiscriminatorValue("premium")
 public class ClienteEstandar extends Cliente{
 
     public ClienteEstandar(String n, String d, String nif, String m) {

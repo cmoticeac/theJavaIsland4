@@ -81,12 +81,14 @@ public class GestionOS {
     //y lo guarda en Datos a través del controlador.
     public void recolectarDatosArticulo(){
         //Variables para la recoleccion de datos
-        String codigos, descripciones;
+        String descripciones;
+        int codigos;
         double precios, envios;
         int tiempos;
         //Inicia la recoleccion de datos
         System.out.println("introduce el codigo\n");
-        codigos = teclado.nextLine();
+        codigos = teclado.nextInt();
+        teclado.nextLine();
         System.out.println("introduce la descripcion\n");
         descripciones = teclado.nextLine();
         System.out.println("introduce el precio, si tiene decimales separalos usando ( , )\n");
